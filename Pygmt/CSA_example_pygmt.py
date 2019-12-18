@@ -16,7 +16,7 @@
 # Provide a labeled color bar for the default GMT color scale
 # Restrict the color bar to a range that makes sense
 # Place the color bar on the map with normalized coordinates
-# Label the color bar differently on x and y axes (very janky, calling the function twice, tricking the y-axis to not have extra labels)
+# Label the color bar differently on x and y axes
 # Place a legend in bottom-left using "justified" coordinates
 # Fill the legend with a fun color that exists in the GMT palette
 # Save the map as a PNG
@@ -44,8 +44,7 @@ fig.text(x=-85.1,y=13,text="Nicaragua",font='15p,Helvetica-Bold,black')
 fig.plot(x=capital_cities_x,y=capital_cities_y,S='a0.25i',G='red',W='0.5p,yellow')
 fig.plot(x=major_cities_x,y=major_cities_y,S='c0.12i',G='red',W='1.0p,white')
 fig.plot(x=gps_lon, y=gps_lat, S='i0.1i',G='royalblue2',W='thin,black')
-fig.colorbar(D="n0.05/0.2+w4.0/0.5",G="0/4000",B="x1000+um")
-fig.colorbar(D="n0.05/0.2+w4.0/0.5",G="0/4000",B="y10+LElevation")
+fig.colorbar(D="n0.05/0.2+w4.0/0.5",G="0/4000",B=["x1000+um","y+LElevation"])
 fig.legend(region=region, projection=proj,spec="legendfile.txt",D="jBL+o0.2c",F="+gantiquewhite+pthick,black");
 fig.savefig('CSA_gnss_figure.png')
 
