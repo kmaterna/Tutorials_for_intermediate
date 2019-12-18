@@ -1,6 +1,6 @@
 # Tutorials_for_intermediate
 
-This repository keeps examples and toy problems for learning intermediate topics in geophysical data analysis. One example is the new pygmt interface with GMT6 and Python3.6+. 
+This repository holds examples, tutorials, and toy problems for learning intermediate topics in geophysical data analysis. One example is the new pygmt interface with GMT6 and Python3.6+. 
 
 ### Tool 1: Pygmt ###
 #### Pygmt mapping can: ####
