@@ -16,3 +16,5 @@ Example map built in Python using pygmt (code included):
 
 
 ![Americas](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/CSA_gnss_figure.png)
+
+![colorbars](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/colorbar_examples.png)
