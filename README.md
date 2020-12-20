@@ -1,20 +1,9 @@
 # Tutorials_for_intermediate
 
-This repository holds examples, tutorials, and toy problems for learning intermediate topics in geophysical data analysis. One example is the new pygmt interface with GMT6 and Python3.6+. 
+This repository holds examples, tutorials, and toy problems for learning intermediate topics in geophysical data analysis. 
 
-### Tool 1: Pygmt ###
-#### Pygmt mapping can: ####
-* Download topography using GMT6 capabilities and plot with grdimage (may only work when connected to Internet?)
-* Add illumination with one command! (-I+d)
-* Provide the familiar annotations using GMT syntax
-* Place scale bar, legend, and color bar using geographic coordinates, justified, and normalized coordinates
-* Label the color bar differently on x and y axes
-* Make legends similar to GMT legends
-* Save the map as a PNG or other formats
+### Page 1: Pygmt ###
+Here I keep a few tutorials of using the PyGMT library with GMT6 and Python3.6+. 
 
-Example map built in Python using pygmt (code included): 
-
-
-![Americas](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/CSA_gnss_figure.png)
-
-![colorbars](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/colorbar_examples.png)
+### Page 2: Software In Science ###
+Here I expand on a few points and observations that help me when writing scientific software. 
