@@ -2,13 +2,20 @@
 
 ### My ongoing journey in scientific computing
 
-* **Why use Git and Github?**
-    * Reason 1: seamlessly sync your code across multiple computers (most important reason for me).  
-    * Reason 2: version control (it's scary to code without it now). 
-    * Reason 3: the possibility of open source software and collaborating through pull requests. 
-    
+**Theme: All the code we write is software**. 
+
+So what is software? What is the purpose of software?  Where does it live, and for how long?    
+  
+
 * **The Promise of Open Source**
     * Collaboration, outsourcing, citing code authors.
+
+* **Why use Version Control and Open Source?**
+    * Reason 1: sync your code across multiple computers (most important reason for me).  
+    * Reason 2: version control (it's scary to code without it now). 
+    * Reason 3: the possibility of open source software and collaborating through pull requests.
+    * Git vs. Github 
+    
 
 * **Overview of Software Libraries**
     * The concept of library code vs. research code: two fundamentally different things. 
