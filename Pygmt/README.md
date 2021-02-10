@@ -43,4 +43,4 @@ echo "-122.8 40.2 -10 15" | gmt plot -Sv0.2+e+a50+gblack+h0+p1p,black+z0.1 -W1p,
 gmt end
 ```
 
-![vectors](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/pngs/vector_map.png&s=200)
+![vectors](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/pngs/vector_map.png)
