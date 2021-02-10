@@ -18,3 +18,9 @@ Example map built in Python using pygmt (code included):
 ![Americas](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/CSA_gnss_figure.png)
 
 ![colorbars](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/colorbar_examples.png)
+
+### Tool 2: GMT6 ###
+An example of GMT6 modern mode vector graphing: 
+See 'gmt6_vector.sh' for code.
+
+![vectors](https://github.com/kmaterna/Tutorials_for_intermediate/blob/master/Pygmt/vector_map.pdf)
