@@ -9,7 +9,7 @@
 # +p is the pen for the vector head
 # +z means the vector is cartesian (convenient for mm/yr)
 
-gmt begin map
+gmt begin vector_map png
 myrange='-125/-121/38/42'
 myproj='M3i'
 gmt pscoast -R$myrange -J$myproj -Slightblue -B1.0 -Wthin,black
