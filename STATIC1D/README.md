@@ -26,7 +26,9 @@ in the stat0A.f source code. For static displacement only, I don't think it matt
 
 ### Step 2A: Get happy Earth Structure
 Establish earth structure in file earth.model_stat. 
-The format of this file is: (not sure what each of these columns are)
+The format of this file is: 
+
+radius radius density bulk-modulus (10^10 Pa), shear-modulus (10^10 Pa), viscosity (n/a for static1d)
 ```
 69 2  6371.000     2.214
  3300.000 3400.000   10.000   65.000    0.500 1.000000E+03
@@ -83,8 +85,12 @@ mv stat2g.out stat2g.out_onefault
 * 139\.        : rake
 * 1000         : fault slip (cm)
 * (14.01, 93.55) : the latitude/longitude of the lower edge of the fault plane closest to the strike direction (ex: the lower northeast corner if the strike is 24 degrees).
-* (0.0, 87.0) etc  : the latitude/longitude of points being evaluated
+* (0.0, 87.0) etc  : the latitude/longitude of points being evaluated at 1600 points
 
-##### Outputs:
-Returning to this question next time. 
+I now suspect that stat2A goes looking for GNSS station locations in "./latlon.inDEF" if you don't provide any from input files. 
 
+##### Outputs: 
+Output displacements in the text file are in cm, in the same lon/lat order as the points in the input  file. 
+* xdisp = columns[20:33]
+* ydisp = columns[33:46]
+* zdisp = columns[46:59]
