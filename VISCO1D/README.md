@@ -26,16 +26,17 @@ Establish earth structure in file earth.model.
 The first row is: N_total_layers, N_viscoelastic_layers, earth radius, DEPFAC
 
 A smaller earth radius speeds up the calculation and doesn't make a difference if you're calculating over a small-ish region.
+Use this smaller earth radius for determining your maximum spherical harmonic degree of the calculation (see below). 
 
-Eigenfunctions are evaluated from surface (depth = 0) to depth = 28 * DEPFAC km. 
+Eigenfunctions are evaluated from surface (depth = 0) to depth = 28 * DEPFAC km. I guess that corresponds to the elastic thickness or maximum depth of slip?  
 
 Line Format for layers (assuming same as Static-1D): 
 
 radius radius density bulk-modulus (10^10 Pa), shear-modulus (10^10 Pa), viscosity (number * 10^18 Pa-s; n/a for static1d)
 
 In this case, we have a spherical shell of about 200 km thick, with the top 25 km being elastic, 
-the next 186 km being viscoelastic, and then another 55 km of elastic at the bottom.  Not sure why.
-The slip goes down to 28*0.892 km, which is 25 km.    
+the next 186 km being viscoelastic, and then another 55 km of elastic at the bottom.  This deep elastic layer is somehow a simple model for the base of the aesthenosphere.
+The slip (or slip rate deficit) goes down to a maximum of 28*0.892 km, which is 25 km.    
 
 ### Step 2B: Call visco1d scripts to generate decay functions
 ```bash
@@ -56,7 +57,11 @@ nice vsphm << ! > /dev/null
 
 ```
 I call this from an experiment directory (not the directory of the source code) that contains earth model file.
-* 2 1000 means... not sure. It's possible that 1000 is vmult. 
+* 0 is the depth of calculations for vtordep and vsphm (0 km for GPS statitons on Earth's surface) 
+* 2 1000 means... I think 1000 is the maximum spherical harmonic degree of the computation.  
+
+In general, you want the maximum spherical harmonic degree to correspond to a length scale less than the elastic plate thickness in your model. 
+The length scale is (2 * pi) * earth_radius / l_max.  So for  this example, (2 * pi * 3600)/1000 = 22, which is less than the elastic thickness of 25 km. 
 
 ### Step 3: Call strainAp for deformation
 ```
@@ -93,6 +98,8 @@ Example fault (Mad River)
 * (40.8810043 -123.631165) : the latitude/longitude of the lower edge of the fault plane closest to the strike direction (ex: the lower northeast corner if the strike is 24 degrees).
 
 I don't know what the 1/0 at the end represent.  
+1: israte in strainAp.f; 0 = displacement/strain; 1 = velocity/strain rate. 
+0: evaluate VE deformation at depth input in the previous runs of vtordep and vsphm, which is 0.0 because GPS sites are at Earth's surface.
 
 ##### Outputs: 
 Output displacements in the text file are in cm, in the same lon/lat order as the points in the input  file. 
