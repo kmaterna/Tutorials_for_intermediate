@@ -36,7 +36,8 @@ So what is software? What is the purpose of software?  Where does it live, and f
         * <ins>**compute**</ins> - memory into memory 
         * <ins>**output**</ins> - memory into files 
         * <ins>**coordinators**</ins> - string it all together
-    * Larger projects have layers of these five types of functions, like fractal patterns 
+        * <ins>**visualizing**</ins> - memory into pretty pictures. Sometimes done last.
+    * Larger projects have layers of these types of functions, like fractal patterns 
     * internal data formats are extremely important (I use named tuples)
     * writing software packages
     * doesn't matter which language you use
@@ -53,6 +54,8 @@ So what is software? What is the purpose of software?  Where does it live, and f
     * Record your computer configuration in files. Every time you 'pip install' or 'sudo apt-get install', you should be writing it down in a type of diary. If your computer crashes or you need to nuke your operating system, you should be able to recover.  You should be able to start from a fresh installation.
     * Don't put your passwords in Github. It's amazing how many passwords are on Github.  You can search all of Github for the word 'Password' and it's scary.
     * IDEs are quite helpful (Sublime --> Atom --> PyCharm, increasing in complexity)
+    * Conda Environments are your friend.
+    * Github recently changed to PAT. Worth configuring to work this way. 
 
 
 ### Psychological shifts: 
